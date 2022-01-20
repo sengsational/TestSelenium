@@ -1,146 +1,100 @@
-2022-01-20 11:45:55.230 19315-19315/? I/al.testseleniu: Late-enabling -Xcheck:jni
-2022-01-20 11:45:55.294 19315-19315/? D/ProcessState: Binder ioctl to enable oneway spam detection failed: Invalid argument
-2022-01-20 11:45:55.397 19315-19315/? V/studio.deploy: Startup agent attached to VM
-2022-01-20 11:45:55.398 19315-19315/? V/studio.deploy: No existing instrumentation found. Loading instrumentation from instruments-509d6864.jar
-2022-01-20 11:45:55.828 19315-19315/? W/al.testseleniu: Current dex file has more than one class in it. Calling RetransformClasses on this class might fail if no transformations are applied to it!
-2022-01-20 11:45:55.831 19315-19315/? W/al.testseleniu: Redefining intrinsic method java.lang.Thread java.lang.Thread.currentThread(). This may cause the unexpected use of the original definition of java.lang.Thread java.lang.Thread.currentThread()in methods that have already been compiled.
-2022-01-20 11:45:55.831 19315-19315/? W/al.testseleniu: Redefining intrinsic method boolean java.lang.Thread.interrupted(). This may cause the unexpected use of the original definition of boolean java.lang.Thread.interrupted()in methods that have already been compiled.
-2022-01-20 11:45:55.899 19315-19315/? W/al.testseleniu: Current dex file has more than one class in it. Calling RetransformClasses on this class might fail if no transformations are applied to it!
-2022-01-20 11:45:56.745 19315-19315/? W/al.testseleniu: Current dex file has more than one class in it. Calling RetransformClasses on this class might fail if no transformations are applied to it!
-        at com.gargoylesoftware.htmlunit.util.UrlUtils.encode(UrlUtils.java:377)
-        at com.gargoylesoftware.htmlunit.util.UrlUtils.encodeUrl(UrlUtils.java:286)
-2022-01-20 11:45:57.760 19315-19315/com.sengsational.testselenium E/studio.deploy: Failed to instrument: android/app/ResourcesManager
-        at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1536)
-        at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1514)
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:493)
-2022-01-20 11:45:57.764 19315-19315/com.sengsational.testselenium W/al.testseleniu: Current dex file has more than one class in it. Calling RetransformClasses on this class might fail if no transformations are applied to it!
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:413)
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:546)
-2022-01-20 11:45:57.780 19315-19315/com.sengsational.testselenium D/CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10206; state: ENABLED
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:528)
-        at com.sengsational.testselenium.MainActivity.onCreate(MainActivity.java:19)
-        at android.app.Activity.performCreate(Activity.java:8051)
-        at android.app.Activity.performCreate(Activity.java:8031)
-        at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1329)
-        at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3608)
-        at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3792)
-        at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
-        at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135)
-        at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
-        at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2210)
-        at android.os.Handler.dispatchMessage(Handler.java:106)
-        at android.os.Looper.loopOnce(Looper.java:201)
-        at android.os.Looper.loop(Looper.java:288)
-        at android.app.ActivityThread.main(ActivityThread.java:7839)
-        at java.lang.reflect.Method.invoke(Native Method)
-        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
-        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
-     Caused by: java.lang.ClassNotFoundException: Didn't find class "org.apache.commons.codec.net.URLCodec" on path: DexPathList[[zip file "/data/app/~~uUpKet9ZctdUlsTtM3mARw==/com.sengsational.testselenium-4htYUd3LC7u5uV8_2uU3Tw==/base.apk"],nativeLibraryDirectories=[/data/app/~~uUpKet9ZctdUlsTtM3mARw==/com.sengsational.testselenium-4htYUd3LC7u5uV8_2uU3Tw==/lib/arm64, /system/lib64, /system_ext/lib64, /product/lib64]]
-        at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:218)
-        at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
-        at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
-        at com.gargoylesoftware.htmlunit.util.UrlUtils.encode(UrlUtils.java:377) 
-        at com.gargoylesoftware.htmlunit.util.UrlUtils.encodeUrl(UrlUtils.java:286) 
-        at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1536) 
-        at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1514) 
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:493) 
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:413) 
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:546) 
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:528) 
-        at com.sengsational.testselenium.MainActivity.onCreate(MainActivity.java:19) 
-        at android.app.Activity.performCreate(Activity.java:8051) 
-        at android.app.Activity.performCreate(Activity.java:8031) 
-        at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1329) 
-        at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3608) 
-        at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3792) 
-        at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103) 
-        at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135) 
-        at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95) 
-        at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2210) 
-        at android.os.Handler.dispatchMessage(Handler.java:106) 
-        at android.os.Looper.loopOnce(Looper.java:201) 
-        at android.os.Looper.loop(Looper.java:288) 
-        at android.app.ActivityThread.main(ActivityThread.java:7839) 
-        at java.lang.reflect.Method.invoke(Native Method) 
-        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548) 
-        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003) 
-2022-01-20 11:45:55.230 19315-19315/? I/al.testseleniu: Late-enabling -Xcheck:jni
-2022-01-20 11:45:55.294 19315-19315/? D/ProcessState: Binder ioctl to enable oneway spam detection failed: Invalid argument
-2022-01-20 11:45:55.388 19315-19315/? W/re-initialized>: type=1400 audit(0.0:21574): avc: granted { execute } for path="/data/data/com.sengsational.testselenium/code_cache/startup_agents/6a9a542f-agent.so" dev="dm-8" ino=60128 scontext=u:r:untrusted_app:s0:c206,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c206,c256,c512,c768 tclass=file app=com.sengsational.testselenium
-2022-01-20 11:45:55.397 19315-19315/? V/studio.deploy: Startup agent attached to VM
-2022-01-20 11:45:55.398 19315-19315/? V/studio.deploy: No existing instrumentation found. Loading instrumentation from instruments-509d6864.jar
-2022-01-20 11:45:55.401 19315-19315/? W/al.testseleniu: DexFile /data/data/com.sengsational.testselenium/code_cache/.studio/instruments-509d6864.jar is in boot class path but is not in a known location
-2022-01-20 11:45:55.828 19315-19315/? W/al.testseleniu: Current dex file has more than one class in it. Calling RetransformClasses on this class might fail if no transformations are applied to it!
-2022-01-20 11:45:55.831 19315-19315/? W/al.testseleniu: Redefining intrinsic method java.lang.Thread java.lang.Thread.currentThread(). This may cause the unexpected use of the original definition of java.lang.Thread java.lang.Thread.currentThread()in methods that have already been compiled.
-2022-01-20 11:45:55.831 19315-19315/? W/al.testseleniu: Redefining intrinsic method boolean java.lang.Thread.interrupted(). This may cause the unexpected use of the original definition of boolean java.lang.Thread.interrupted()in methods that have already been compiled.
-2022-01-20 11:45:55.899 19315-19315/? W/al.testseleniu: Current dex file has more than one class in it. Calling RetransformClasses on this class might fail if no transformations are applied to it!
-2022-01-20 11:45:56.745 19315-19315/? W/al.testseleniu: Current dex file has more than one class in it. Calling RetransformClasses on this class might fail if no transformations are applied to it!
-2022-01-20 11:45:57.760 19315-19315/com.sengsational.testselenium E/studio.deploy: Failed to instrument: android/app/ResourcesManager
-2022-01-20 11:45:57.764 19315-19315/com.sengsational.testselenium W/al.testseleniu: Current dex file has more than one class in it. Calling RetransformClasses on this class might fail if no transformations are applied to it!
-2022-01-20 11:45:57.780 19315-19315/com.sengsational.testselenium D/CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10206; state: ENABLED
-2022-01-20 11:45:58.483 19315-19315/com.sengsational.testselenium V/GraphicsEnvironment: ANGLE Developer option for 'com.sengsational.testselenium' set to: 'default'
-2022-01-20 11:45:58.484 19315-19315/com.sengsational.testselenium V/GraphicsEnvironment: ANGLE GameManagerService for com.sengsational.testselenium: false
-2022-01-20 11:45:58.484 19315-19315/com.sengsational.testselenium V/GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
-2022-01-20 11:45:58.496 19315-19315/com.sengsational.testselenium D/NetworkSecurityConfig: No Network Security Config specified, using platform default
-2022-01-20 11:45:58.499 19315-19315/com.sengsational.testselenium D/NetworkSecurityConfig: No Network Security Config specified, using platform default
-2022-01-20 11:45:58.822 19315-19315/com.sengsational.testselenium W/al.testseleniu: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
-2022-01-20 11:45:58.825 19315-19315/com.sengsational.testselenium W/al.testseleniu: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
-2022-01-20 11:46:00.139 19315-19315/com.sengsational.testselenium D/AndroidRuntime: Shutting down VM
-2022-01-20 11:46:00.144 19315-19315/com.sengsational.testselenium E/AndroidRuntime: FATAL EXCEPTION: main
-    Process: com.sengsational.testselenium, PID: 19315
-    java.lang.NoClassDefFoundError: Failed resolution of: Lorg/apache/commons/codec/net/URLCodec;
-        at com.gargoylesoftware.htmlunit.util.UrlUtils.encode(UrlUtils.java:377)
-        at com.gargoylesoftware.htmlunit.util.UrlUtils.encodeUrl(UrlUtils.java:286)
-        at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1536)
-        at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1514)
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:493)
+2022-01-20 14:33:00.285 26420-26420/? I/al.testseleniu: Late-enabling -Xcheck:jni
+2022-01-20 14:33:00.319 26420-26420/? D/ProcessState: Binder ioctl to enable oneway spam detection failed: Invalid argument
+2022-01-20 14:33:00.352 26420-26420/? W/re-initialized>: type=1400 audit(0.0:22932): avc: granted { execute } for path="/data/data/com.sengsational.testselenium/code_cache/startup_agents/6a9a542f-agent.so" dev="dm-8" ino=67720 scontext=u:r:untrusted_app:s0:c206,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c206,c256,c512,c768 tclass=file app=com.sengsational.testselenium
+2022-01-20 14:33:00.357 26420-26420/? V/studio.deploy: Startup agent attached to VM
+2022-01-20 14:33:00.357 26420-26420/? V/studio.deploy: No existing instrumentation found. Loading instrumentation from instruments-509d6864.jar
+    x-amz-client-context:eyJjbGllbnQiOnsiYXBwX3BhY2thZ2VfbmFtZSI6ImNvbS5yZXB1YmxpY3dpcmVsZXNzLnRlbCIsImFwcF92ZXJzaW9uX2NvZGUiOiIzMTQ3MzY2NSIsImFwcF90aXRsZSI6IlJlcHVibGljIFdpcmVsZXNzIiwiYXBwX3ZlcnNpb25fbmFtZSI6IjMuMzAuNC4xIiwiY2xpZW50X2lkIjoiZTQ1NDkwNjItOTdkZS00Nzc4LTlmYTMtMmViNzVmNWQ2Mjg2In0sImVudiI6eyJjYXJyaWVyIjoiUmVwdWJsaWMiLCJwbGF0Zm9ybV92ZXJzaW9uIjoiMTIiLCJtb2RlbCI6IlBpeGVsIDNhIiwibG9jYWxlIjoiZW5fVVMiLCJuZXR3b3JrVHlwZSI6IldJRkkiLCJtYWtlIjoiR29vZ2xlIiwicGxhdGZvcm0iOiJBTkRST0lEIn0sImN1c3RvbSI6eyJlbmRwb2ludCI6IntcIkFwcGxpY2F0aW9uSWRcIjpcImM1MGEyY2Q5Y2ZjOTRlY2U5NmJhYzI4ZjViZjY5YTVmXCIsXCJFbmRwb2ludElkXCI6XCJlNDU0OTA2Mi05N2RlLTQ3NzgtOWZhMy0yZWI3NWY1ZDYyODZcIixcIkNoYW5uZWxUeXBlXCI6XCJHQ01cIixcIkxvY2F0aW9uXCI6e1wiUG9zdGFsQ29kZVwiOlwiXCIsXCJDaXR5XCI6XCJcIixcIlJlZ2lvblwiOlwiXCIsXCJDb3VudHJ5XCI6XCJVU0FcIn0sXCJEZW1vZ3JhcGhpY1wiOntcIk1ha2VcIjpcIkdvb2dsZVwiLFwiTW9kZWxcIjpcIlBpeGVsIDNhXCIsXCJUaW1lem9uZVwiOlwiQW1lcmljYVxcXC9OZXdfWW9ya1wiLFwiTG9jYWxlXCI6XCJlbl9VU1wiLFwiQXBwVmVyc2lvblwiOlwiMy4zMC40LjFcIixcIlBsYXRmb3JtXCI6XCJBTkRST0lEXCIsXCJQbGF0Zm9ybVZlcnNpb25cIjpcIjEyXCJ9LFwiRWZmZWN0aXZlRGF0ZVwiOlwiMjAyMi0wMS0wOVQwNjowMToyMy4zNjZaXCIsXCJPcHRPdXRcIjpcIkFMTFwiLFwiVXNlclwiOnt9fSJ9LCJzZXJ2aWNlcyI6eyJtb2JpbGVfYW5hbHl0aWNzIjp7ImFwcF9pZCI6ImM1MGEyY2Q5Y2ZjOTRlY2U5NmJhYzI4ZjViZjY5YTVmIn19fQ==
+2022-01-20 14:33:00.359 26420-26420/? W/al.testseleniu: DexFile /data/data/com.sengsational.testselenium/code_cache/.studio/instruments-509d6864.jar is in boot class path but is not in a known location
+    x-amz-client-context-encoding:base64
+    x-amz-date:20220120T192156Z
+2022-01-20 14:33:00.360 26420-26420/? V/studio.deploy: Applying transforms with cached classes
+    x-amz-security-token:IQoJb3JpZ2luX2VjEPT//////////wEaCXVzLWVhc3QtMSJHMEUCIAnL2bv31iF+3zvuqFjargqdnR26FvAkxBEAyepWZizYAiEA58kIGw4bCpF1jGnAJ0pSMoB6SHWxGBm59eLFxTwRF90qkQYIHRAAGgwzOTk1MTcxODcxNTUiDE5xAOJkC7ySVZl2DCruBSKtea4hczect3yVo4BGXRZwfWegEhfdEU17ttgE50gLUC5JpBkc9eE9RcBOTMxB0AUlYLceJFpLlvmI6qiqjNgHQU8sslhMERJfGkbhdjLc5Q9p+WJ3fKKmf9JcQ67+wFiLUPUXjK8AS2FyzRu0iAvREi9CDHn35UO1GU6vbiAThadPUO/oO0aTx8cv0PLQJA5CPcdAnAPXsA0DVzws5uRh2Kh75nTDxIsHvyVeJuh7w/M7CK8LaYMdqxpq/rafvfYPG3Dl9tua8BTYJxWfuyS1KSKs9tzUwvr33UKm391ZPtOyQZNxfoNhSi0k+vHc0sFFOaWuV5ToZoWS+H3vp8Czf0Js0wiv2wsxOtUIQpHQOJEN4H08tSgCiWaSE3u0WcgxeSuNOn8xrf7lxy/TQzIEta/8Iggw4OwTLVi1nGM+vn/aGvYOXEYPN8O3NNZWfPxv13WJ4B2sdf3KzwAF/7wLwWCwT0zVCuScQ3ki7Nps5q3yS2aq4b4hYRViF63GDyzwbxrXkR99eTr7wAfa8725lEbMygCnqcSbegQlgxLjph5Pj2t26EgBaap9zkvsCfpeR7OxSWzM97mptyMb72NkKsmDu8tzLnsrjaNAOZIs++opUP2yUqVnrYuXh6H/Wsieyc+j7xGTLJgqe4FzghIuy5lCIMPpEWgDQ2hW7y2COTvl9BrXJd4HWM8/ZLvUUO0j92k7DTBjpJk2qNmUuYKz0lMpgZHILvH069N47HBZjy25EkRkvdszAjMKYZzoGCSMoJ4NcliTBCFE6NT/8QYBgB0qqdqfFNjK4YIv6e1bAfU2C5N3Ns1IIrJE2RjKJdpqyZwqSLYgVnXy9cVv62oZdDGFNweatLj714IA6wSVvEvByz6O055mbFZAbYoUyRysHqfapi6Dt6MdReh/nUv6hjGO3rUkISIV9zxH7Y8Bp8Ny9MS4/9xqIIXgLBuS2Gy4jsXsgMjG9bQtDnGFIAU6sDRML8szCRFrD2shRTDW7KaPBjqHAuU21jrnLcBQLyllKFxuQjkYqIHldsHFW6ADK4MsEamgkM9cyl/P20951QnrxMBRH15k0eUUm/T/cQsgO6cPDYiz/20jTOYg+Be0rv7Xj+53Q8isCw7rupM65Y9iq1QvvcWrothODDsusX9d0ti9ZwBzghvrgYbDwR3Xh1Ta8iX4QVYnW1oVmCQu9JParzy5mIhx2GLcRephXa48aeM0BxQHh64kAmdMg3ePmzBPdmPi93s8iDn7XQqKgBVd+g5JCWL277yReCs7We6qdz+ZEG9CIARaKXn/HwZjpkLxc2ON61xYjyYq1YwjOBf6UWGc4QDdaQRw/pW5QYktwj2pM+v82rBDrg8Z
+    x-amzn-clientsdkversion:PinpointSDK-2.6.30
+    
+    host;x-amz-client-context;x-amz-client-context-encoding;x-amz-date;x-amz-security-token;x-amzn-clientsdkversion
+    c5dd9e45f136fae508988981c1ce0ef9a2dc7711bacbbdac4f6922fef92e85f0"
+2022-01-20 14:33:00.285 26420-26420/? I/al.testseleniu: Late-enabling -Xcheck:jni
+2022-01-20 14:33:00.319 26420-26420/? D/ProcessState: Binder ioctl to enable oneway spam detection failed: Invalid argument
+2022-01-20 14:33:00.352 26420-26420/? W/re-initialized>: type=1400 audit(0.0:22932): avc: granted { execute } for path="/data/data/com.sengsational.testselenium/code_cache/startup_agents/6a9a542f-agent.so" dev="dm-8" ino=67720 scontext=u:r:untrusted_app:s0:c206,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c206,c256,c512,c768 tclass=file app=com.sengsational.testselenium
+2022-01-20 14:33:00.357 26420-26420/? V/studio.deploy: Startup agent attached to VM
+2022-01-20 14:33:00.357 26420-26420/? V/studio.deploy: No existing instrumentation found. Loading instrumentation from instruments-509d6864.jar
+2022-01-20 14:33:00.359 26420-26420/? W/al.testseleniu: DexFile /data/data/com.sengsational.testselenium/code_cache/.studio/instruments-509d6864.jar is in boot class path but is not in a known location
+2022-01-20 14:33:00.360 26420-26420/? V/studio.deploy: Applying transforms with cached classes
+2022-01-20 14:33:00.369 26420-26420/com.sengsational.testselenium W/al.testseleniu: Redefining intrinsic method java.lang.Thread java.lang.Thread.currentThread(). This may cause the unexpected use of the original definition of java.lang.Thread java.lang.Thread.currentThread()in methods that have already been compiled.
+2022-01-20 14:33:00.369 26420-26420/com.sengsational.testselenium W/al.testseleniu: Redefining intrinsic method boolean java.lang.Thread.interrupted(). This may cause the unexpected use of the original definition of boolean java.lang.Thread.interrupted()in methods that have already been compiled.
+2022-01-20 14:33:00.374 26420-26420/com.sengsational.testselenium D/CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10206; state: ENABLED
+2022-01-20 14:33:00.809 26420-26420/com.sengsational.testselenium V/GraphicsEnvironment: ANGLE Developer option for 'com.sengsational.testselenium' set to: 'default'
+2022-01-20 14:33:00.810 26420-26420/com.sengsational.testselenium V/GraphicsEnvironment: ANGLE GameManagerService for com.sengsational.testselenium: false
+2022-01-20 14:33:00.810 26420-26420/com.sengsational.testselenium V/GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+2022-01-20 14:33:00.815 26420-26420/com.sengsational.testselenium D/NetworkSecurityConfig: No Network Security Config specified, using platform default
+2022-01-20 14:33:00.816 26420-26420/com.sengsational.testselenium D/NetworkSecurityConfig: No Network Security Config specified, using platform default
+2022-01-20 14:33:00.821 26420-26420/com.sengsational.testselenium D/WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+2022-01-20 14:33:00.877 26420-26443/com.sengsational.testselenium D/CompatibilityChangeReporter: Compat change id reported: 160794467; UID 10206; state: ENABLED
+2022-01-20 14:33:00.969 26420-26420/com.sengsational.testselenium W/al.testseleniu: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+2022-01-20 14:33:00.970 26420-26420/com.sengsational.testselenium W/al.testseleniu: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+2022-01-20 14:33:01.077 26420-26444/com.sengsational.testselenium I/AdrenoGLES-0: QUALCOMM build                   : 781e7d0, I46ff5fc46f
+    Build Date                       : 12/01/20
+    OpenGL ES Shader Compiler Version: EV031.31.04.01
+    Local Branch                     : QPR1
+    Remote Branch                    : 
+    Remote Branch                    : 
+    Reconstruct Branch               : 
+2022-01-20 14:33:01.077 26420-26444/com.sengsational.testselenium I/AdrenoGLES-0: Build Config                     : C P 11.0.1 AArch64
+2022-01-20 14:33:01.077 26420-26444/com.sengsational.testselenium I/AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+2022-01-20 14:33:01.081 26420-26444/com.sengsational.testselenium I/AdrenoGLES-0: PFP: 0x016ee190, ME: 0x00000000
+2022-01-20 14:33:01.084 26420-26444/com.sengsational.testselenium W/AdrenoUtils: <ReadGpuID_from_sysfs:197>: Failed to open /sys/class/kgsl/kgsl-3d0/gpu_model
+2022-01-20 14:33:01.084 26420-26444/com.sengsational.testselenium W/AdrenoUtils: <ReadGpuID:221>: Failed to read chip ID from gpu_model. Fallback to use the GSL path
+2022-01-20 14:33:01.084 26420-26444/com.sengsational.testselenium D/hw-ProcessState: Binder ioctl to enable oneway spam detection failed: Invalid argument
+2022-01-20 14:33:01.096 26420-26450/com.sengsational.testselenium I/Gralloc4: mapper 4.x is not supported
+2022-01-20 14:33:01.096 26420-26450/com.sengsational.testselenium W/Gralloc3: mapper 3.x is not supported
+2022-01-20 14:33:01.098 26420-26450/com.sengsational.testselenium W/Gralloc4: allocator 4.x is not supported
+2022-01-20 14:33:01.099 26420-26450/com.sengsational.testselenium W/Gralloc3: allocator 3.x is not supported
+2022-01-20 14:33:01.145 26420-26453/com.sengsational.testselenium D/LogonWorker: doWork: LogonWorker: About to try logon for sengsational
+2022-01-20 14:33:01.606 26420-26453/com.sengsational.testselenium V/LogonWorker: ABOUT TO GET HTML PAGE
+2022-01-20 14:33:02.407 26420-26432/com.sengsational.testselenium W/System: A resource failed to call close. 
+2022-01-20 14:33:04.925 26420-26447/com.sengsational.testselenium E/WM-WorkerWrapper: Work [ id=849532b3-c659-4d27-87a7-4842e58f6e64, tags={ com.sengsational.testselenium.LogonWorker, LogonWorker } ] failed because it threw an exception/error
+    java.util.concurrent.ExecutionException: java.lang.NoClassDefFoundError: Failed resolution of: Ljava/awt/datatransfer/ClipboardOwner;
+        at androidx.work.impl.utils.futures.AbstractFuture.getDoneValue(AbstractFuture.java:516)
+        at androidx.work.impl.utils.futures.AbstractFuture.get(AbstractFuture.java:475)
+        at androidx.work.impl.WorkerWrapper$2.run(WorkerWrapper.java:311)
+        at androidx.work.impl.utils.SerialExecutor$Task.run(SerialExecutor.java:91)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+        at java.lang.Thread.run(Thread.java:920)
+     Caused by: java.lang.NoClassDefFoundError: Failed resolution of: Ljava/awt/datatransfer/ClipboardOwner;
+        at com.gargoylesoftware.htmlunit.html.parser.neko.HtmlUnitNekoDOMBuilder.handleCharacters(HtmlUnitNekoDOMBuilder.java:584)
+        at com.gargoylesoftware.htmlunit.html.parser.neko.HtmlUnitNekoDOMBuilder.startElement(HtmlUnitNekoDOMBuilder.java:299)
+        at org.apache.xerces.parsers.AbstractSAXParser.startElement(Unknown Source:148)
+        at com.gargoylesoftware.htmlunit.html.parser.neko.HtmlUnitNekoDOMBuilder.startElement(HtmlUnitNekoDOMBuilder.java:285)
+        at org.apache.xerces.parsers.AbstractXMLDocumentParser.emptyElement(Unknown Source:0)
+        at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.startElement(HTMLTagBalancer.java:811)
+        at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.emptyElement(HTMLTagBalancer.java:859)
+        at net.sourceforge.htmlunit.cyberneko.filters.DefaultFilter.emptyElement(DefaultFilter.java:149)
+        at net.sourceforge.htmlunit.cyberneko.filters.NamespaceBinder.emptyElement(NamespaceBinder.java:293)
+        at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scanStartElement(HTMLScanner.java:2808)
+        at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scan(HTMLScanner.java:2131)
+        at net.sourceforge.htmlunit.cyberneko.HTMLScanner.scanDocument(HTMLScanner.java:937)
+        at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.parse(HTMLConfiguration.java:443)
+        at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.parse(HTMLConfiguration.java:394)
+        at org.apache.xerces.parsers.XMLParser.parse(Unknown Source:5)
+        at com.gargoylesoftware.htmlunit.html.parser.neko.HtmlUnitNekoDOMBuilder.parse(HtmlUnitNekoDOMBuilder.java:749)
+        at com.gargoylesoftware.htmlunit.html.parser.neko.HtmlUnitNekoHtmlParser.parse(HtmlUnitNekoHtmlParser.java:205)
+        at com.gargoylesoftware.htmlunit.DefaultPageCreator.createHtmlPage(DefaultPageCreator.java:298)
+        at com.gargoylesoftware.htmlunit.DefaultPageCreator.createPage(DefaultPageCreator.java:218)
+        at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseInto(WebClient.java:681)
+        at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseInto(WebClient.java:583)
+        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:501)
         at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:413)
         at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:546)
         at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:528)
-        at com.sengsational.testselenium.MainActivity.onCreate(MainActivity.java:19)
-        at android.app.Activity.performCreate(Activity.java:8051)
-        at android.app.Activity.performCreate(Activity.java:8031)
-        at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1329)
-        at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3608)
-        at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3792)
-        at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
-        at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135)
-        at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
-        at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2210)
-        at android.os.Handler.dispatchMessage(Handler.java:106)
-        at android.os.Looper.loopOnce(Looper.java:201)
-        at android.os.Looper.loop(Looper.java:288)
-        at android.app.ActivityThread.main(ActivityThread.java:7839)
-        at java.lang.reflect.Method.invoke(Native Method)
-        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
-        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
-     Caused by: java.lang.ClassNotFoundException: Didn't find class "org.apache.commons.codec.net.URLCodec" on path: DexPathList[[zip file "/data/app/~~uUpKet9ZctdUlsTtM3mARw==/com.sengsational.testselenium-4htYUd3LC7u5uV8_2uU3Tw==/base.apk"],nativeLibraryDirectories=[/data/app/~~uUpKet9ZctdUlsTtM3mARw==/com.sengsational.testselenium-4htYUd3LC7u5uV8_2uU3Tw==/lib/arm64, /system/lib64, /system_ext/lib64, /product/lib64]]
+        at com.sengsational.testselenium.LogonWorker.doWork(LogonWorker.java:59)
+        at androidx.work.Worker$1.run(Worker.java:86)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167) 
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641) 
+        at java.lang.Thread.run(Thread.java:920) 
+     Caused by: java.lang.ClassNotFoundException: Didn't find class "java.awt.datatransfer.ClipboardOwner" on path: DexPathList[[dex file "/data/data/com.sengsational.testselenium/code_cache/.overlay/base.apk/classes3.dex", zip file "/data/app/~~TLW9TGsJeovVnGt-gO9H2A==/com.sengsational.testselenium-PWCpprObWExUSCjNfs0stQ==/base.apk"],nativeLibraryDirectories=[/data/app/~~TLW9TGsJeovVnGt-gO9H2A==/com.sengsational.testselenium-PWCpprObWExUSCjNfs0stQ==/lib/arm64, /system/lib64, /system_ext/lib64, /product/lib64]]
         at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:218)
-        at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+2022-01-20 14:33:04.925 26420-26447/com.sengsational.testselenium E/WM-WorkerWrapper:     at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
         at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
-        at com.gargoylesoftware.htmlunit.util.UrlUtils.encode(UrlUtils.java:377) 
-        at com.gargoylesoftware.htmlunit.util.UrlUtils.encodeUrl(UrlUtils.java:286) 
-        at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1536) 
-        at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1514) 
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:493) 
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:413) 
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:546) 
-        at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:528) 
-        at com.sengsational.testselenium.MainActivity.onCreate(MainActivity.java:19) 
-        at android.app.Activity.performCreate(Activity.java:8051) 
-        at android.app.Activity.performCreate(Activity.java:8031) 
-        at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1329) 
-        at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3608) 
-        at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3792) 
-        at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103) 
-        at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135) 
-        at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95) 
-        at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2210) 
-        at android.os.Handler.dispatchMessage(Handler.java:106) 
-        at android.os.Looper.loopOnce(Looper.java:201) 
-        at android.os.Looper.loop(Looper.java:288) 
-        at android.app.ActivityThread.main(ActivityThread.java:7839) 
-        at java.lang.reflect.Method.invoke(Native Method) 
-        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548) 
-        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003) 
-2022-01-20 11:46:00.162 19315-19315/com.sengsational.testselenium I/Process: Sending signal. PID: 19315 SIG: 9
+            ... 30 more
+2022-01-20 14:33:04.927 26420-26447/com.sengsational.testselenium I/WM-WorkerWrapper: Worker result FAILURE for Work [ id=849532b3-c659-4d27-87a7-4842e58f6e64, tags={ com.sengsational.testselenium.LogonWorker, LogonWorker } ]

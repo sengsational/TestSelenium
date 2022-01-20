@@ -17,15 +17,18 @@ dependencyResolutionManagement {
 android {
     packagingOptions {
         resources.excludes.add('META-INF/*') // ADDED DRS20220120
+        resources.excludes.add('mozilla/public-suffix-list.txt') // ADDED DRS202002120
     }
 }
 
 dependencies {
     implementation 'net.sourceforge.htmlunit:htmlunit-android:2.56.0-SNAPSHOT' // ADDED DRS20220120
+    implementation 'org.seleniumhq.selenium:selenium-remote-driver:2.52.0' // ADDED DRS20220120
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava' // ADDED DRS20220120
 }
 
 RESULT: 
-At runtime: "java.lang.ClassNotFoundException: Didn't find class "org.apache.commons.codec.net.URLCodec" on path"
+At runtime: "java.util.concurrent.ExecutionException: java.lang.NoClassDefFoundError: Failed resolution of: Ljava/awt/datatransfer/ClipboardOwner"
 
 CLASSPATH:
 
@@ -55,18 +58,47 @@ releaseRuntimeClasspath - Resolved configuration for runtime for variant: releas
 |              +--- org.eclipse.jetty.websocket:websocket-api:9.4.44.v20210927
 |              +--- org.eclipse.jetty:jetty-util:9.4.44.v20210927
 |              \--- org.eclipse.jetty:jetty-io:9.4.44.v20210927 (*)
-+--- androidx.appcompat:appcompat:1.4.1
-|    +--- androidx.annotation:annotation:1.3.0
-|    +--- androidx.core:core:1.7.0
++--- org.seleniumhq.selenium:selenium-remote-driver:2.52.0
+|    +--- cglib:cglib-nodep:2.1_3
+|    +--- com.google.code.gson:gson:2.3.1
+|    +--- org.seleniumhq.selenium:selenium-api:2.52.0
+|    |    +--- com.google.guava:guava:19.0
+|    |    +--- com.google.code.gson:gson:2.3.1
+|    |    \--- org.apache.httpcomponents:httpclient:4.5.1
+|    |         +--- org.apache.httpcomponents:httpcore:4.4.3
+|    |         +--- commons-logging:commons-logging:1.2
+|    |         \--- commons-codec:commons-codec:1.9
+|    +--- org.apache.httpcomponents:httpclient:4.5.1 (*)
+|    +--- com.google.guava:guava:19.0
+|    +--- org.apache.commons:commons-exec:1.3
+|    +--- net.java.dev.jna:jna:4.1.0
+|    \--- net.java.dev.jna:jna-platform:4.1.0
+|         \--- net.java.dev.jna:jna:4.1.0
++--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
++--- androidx.work:work-runtime:2.7.1
+|    +--- androidx.annotation:annotation-experimental:1.0.0 -> 1.1.0
+|    +--- com.google.guava:listenablefuture:1.0 -> 9999.0-empty-to-avoid-conflict-with-guava
+|    +--- androidx.lifecycle:lifecycle-livedata:2.1.0
+|    |    +--- androidx.arch.core:core-runtime:2.1.0
+|    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
+|    |    |    \--- androidx.arch.core:core-common:2.1.0
+|    |    |         \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
+|    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.1.0 -> 2.3.1
+|    |    |    +--- androidx.arch.core:core-common:2.1.0 (*)
+|    |    |    +--- androidx.arch.core:core-runtime:2.1.0 (*)
+|    |    |    \--- androidx.lifecycle:lifecycle-common:2.3.1 -> 2.4.0
+|    |    |         \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
+|    |    \--- androidx.arch.core:core-common:2.1.0 (*)
+|    +--- androidx.startup:startup-runtime:1.0.0
+|    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
+|    |    \--- androidx.tracing:tracing:1.0.0
+|    |         \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
+|    +--- androidx.core:core:1.6.0 -> 1.7.0
 |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.3.0
 |    |    +--- androidx.annotation:annotation-experimental:1.1.0
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.3.1 -> 2.4.0
-|    |    |    +--- androidx.arch.core:core-runtime:2.1.0
-|    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    |    \--- androidx.arch.core:core-common:2.1.0
-|    |    |    |         \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    +--- androidx.lifecycle:lifecycle-common:2.4.0
-|    |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
+|    |    |    +--- androidx.arch.core:core-runtime:2.1.0 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-common:2.4.0 (*)
 |    |    |    +--- androidx.arch.core:core-common:2.1.0 (*)
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    +--- androidx.versionedparcelable:versionedparcelable:1.1.1
@@ -75,8 +107,25 @@ releaseRuntimeClasspath - Resolved configuration for runtime for variant: releas
 |    |    |         \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    +--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
 |    |    \--- androidx.concurrent:concurrent-futures:1.0.0
-|    |         +--- com.google.guava:listenablefuture:1.0
+|    |         +--- com.google.guava:listenablefuture:1.0 -> 9999.0-empty-to-avoid-conflict-with-guava
 |    |         \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
+|    +--- androidx.room:room-runtime:2.2.5
+|    |    +--- androidx.room:room-common:2.2.5
+|    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
+|    |    +--- androidx.sqlite:sqlite-framework:2.0.1 -> 2.1.0
+|    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.3.0
+|    |    |    \--- androidx.sqlite:sqlite:2.1.0
+|    |    |         \--- androidx.annotation:annotation:1.0.0 -> 1.3.0
+|    |    +--- androidx.sqlite:sqlite:2.0.1 -> 2.1.0 (*)
+|    |    \--- androidx.arch.core:core-runtime:2.0.1 -> 2.1.0 (*)
+|    +--- androidx.sqlite:sqlite:2.1.0 (*)
+|    +--- androidx.sqlite:sqlite-framework:2.1.0 (*)
+|    +--- androidx.core:core:1.1.0 -> 1.7.0 (*)
+|    \--- androidx.lifecycle:lifecycle-service:2.1.0
+|         \--- androidx.lifecycle:lifecycle-runtime:2.1.0 -> 2.4.0 (*)
++--- androidx.appcompat:appcompat:1.4.1
+|    +--- androidx.annotation:annotation:1.3.0
+|    +--- androidx.core:core:1.7.0 (*)
 |    +--- androidx.cursoradapter:cursoradapter:1.0.0
 |    |    \--- androidx.annotation:annotation:1.0.0 -> 1.3.0
 |    +--- androidx.activity:activity:1.2.4
@@ -92,14 +141,10 @@ releaseRuntimeClasspath - Resolved configuration for runtime for variant: releas
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1
 |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.3.0
 |    |    |    +--- androidx.savedstate:savedstate:1.1.0 (*)
-|    |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.3.1
-|    |    |    |    +--- androidx.arch.core:core-common:2.1.0 (*)
-|    |    |    |    +--- androidx.arch.core:core-runtime:2.1.0 (*)
-|    |    |    |    \--- androidx.lifecycle:lifecycle-common:2.3.1 -> 2.4.0 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.3.1 (*)
 |    |    |    \--- androidx.lifecycle:lifecycle-viewmodel:2.3.1 (*)
 |    |    +--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
-|    |    \--- androidx.tracing:tracing:1.0.0
-|    |         \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
+|    |    \--- androidx.tracing:tracing:1.0.0 (*)
 |    +--- androidx.fragment:fragment:1.3.6
 |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    +--- androidx.core:core:1.2.0 -> 1.7.0 (*)
@@ -114,10 +159,7 @@ releaseRuntimeClasspath - Resolved configuration for runtime for variant: releas
 |    |    +--- androidx.loader:loader:1.0.0
 |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.3.0
 |    |    |    +--- androidx.core:core:1.0.0 -> 1.7.0 (*)
-|    |    |    +--- androidx.lifecycle:lifecycle-livedata:2.0.0
-|    |    |    |    +--- androidx.arch.core:core-runtime:2.0.0 -> 2.1.0 (*)
-|    |    |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.0.0 -> 2.3.1 (*)
-|    |    |    |    \--- androidx.arch.core:core-common:2.0.0 -> 2.1.0 (*)
+|    |    |    +--- androidx.lifecycle:lifecycle-livedata:2.0.0 -> 2.1.0 (*)
 |    |    |    \--- androidx.lifecycle:lifecycle-viewmodel:2.0.0 -> 2.3.1 (*)
 |    |    +--- androidx.activity:activity:1.2.4 (*)
 |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.3.1 (*)
@@ -148,9 +190,7 @@ releaseRuntimeClasspath - Resolved configuration for runtime for variant: releas
 |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.3.0
 |    |    +--- androidx.lifecycle:lifecycle-process:2.4.0
 |    |    |    +--- androidx.lifecycle:lifecycle-runtime:2.4.0 (*)
-|    |    |    \--- androidx.startup:startup-runtime:1.0.0
-|    |    |         +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |         \--- androidx.tracing:tracing:1.0.0 (*)
+|    |    |    \--- androidx.startup:startup-runtime:1.0.0 (*)
 |    |    +--- androidx.core:core:1.3.0 -> 1.7.0 (*)
 |    |    \--- androidx.startup:startup-runtime:1.0.0 (*)
 |    +--- androidx.emoji2:emoji2-views-helper:1.0.0
