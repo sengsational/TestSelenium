@@ -9,7 +9,10 @@ The purpose of this repo is to collect details surrounding the problem.
 Using "org.seleniumhq.selenium:selenium-htmlunit-driver:2.52.0" results in
 a library mismatch problem (https://stackoverflow.com/questions/69523686/android-studio-how-can-i-fill-in-a-html-form-and-click-the-submit-button-with-se).
 
-Using "net.sourceforge.htmlunit:htmlunit-android:2.56.0-SNAPSHOT" results in 
+Using "net.sourceforge.htmlunit:htmlunit-android:2.56.0-SNAPSHOT" resulted in 
 an overlapping library problem (https://github.com/HtmlUnit/htmlunit/issues/133#issuecomment-1008189635)
 in the area of org.apache.commons.codec.net.URLCodec.
 
+The above problem was resolved by including 
+`implementation 'org.seleniumhq.selenium:selenium-remote-driver:2.52.0'`
+in the build.gradle dependencies, but now there is a `NoClassDefFoundError` for `java/awt/datatransfer/ClipboardOwner`
